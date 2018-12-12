@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#benzMotorwagen {
+    width: 400px;
+    height: 300px;
+    position :absolute;
+    -webkit-animation: movement 5s infinite; 
+    animation: movement 5s infinite; 
+}
+#backcontainer{
+height:130px;
+width:130px;
+position:absolute;
+left:55px;
+top:130px;
+-webkit-animation: rotate 5s infinite; 
+animation: rotate 5s infinite; 
+}
+#frontcontainer{
+height:105px;
+width:105px;
+position:absolute;
+left:265px;
+top:154px;
+-webkit-animation: rotate 5s infinite; 
+animation: rotate 5s infinite; 
+}
+
+@keyframes movement {
+    0% {left: 0%;}
+    50%{left:20%; }
+    100% {left: 100%;}
+}
+
+@keyframes rotate {
+    0% {
+    transform: rotate(0deg) ;
+  }
+  50% {
+    transform: rotate(45deg) ;
+  }
+    100% {
+    transform: rotate(270deg) ;
+  }
+}
+
+#modelT {
+    width: 400px;
+    height: 300px;
+    position :absolute;
+    top:300px;
+    -webkit-animation: modelTmovement 5s infinite; 
+    animation: modelTmovement 5s infinite; 
+}
+#modelT_back{
+height:100px;
+width:100px;
+position:absolute;
+left:44px;
+top:144px;
+-webkit-animation: Trotate 5s infinite; 
+animation: Trotate 5s infinite; 
+}
+#modelT_front{
+height:84px;
+width:84px;
+position:absolute;
+left:270px;
+top:160px;
+-webkit-animation: Trotate 5s infinite; 
+animation: Trotate 5s infinite; 
+}
+
+@keyframes modelTmovement {
+    0% {left: 0%;}
+    50%{left:20%; }
+    100% {left: 100%;}
+}
+
+@keyframes Trotate {
+    0% {
+    transform: rotate(0deg) ;
+  }
+  50% {
+    transform: rotate(45deg) ;
+  }
+    100% {
+    transform: rotate(360deg) ;
+  }
+}
+
+#airFlow {
+    width: 400px;
+    height: 300px;
+    position :absolute;
+    top:600px;
+    -webkit-animation: Airflowmovement 5s infinite; 
+    animation: Airflowmovement 5s infinite; 
+}
+#airFlow_FrontTire{
+height:76px;
+width:76px;
+position:absolute;
+left:49px;
+top:144px;
+-webkit-animation: Airflowrotate 5s infinite; 
+animation: Airflowrotate 5s infinite; 
+}
+
+#airFlow_BackTire{
+height:76px;
+width:76px;
+position:absolute;
+left:295px;
+top:144px;
+-webkit-animation: Airflowrotate 5s infinite; 
+animation: Airflowrotate 5s infinite; 
+}
+
+#airFlow_wing{
+height:81px;
+width:100px;
+position:absolute;
+left:30px;
+top:150px;
+
+}
+
+@keyframes Airflowmovement {
+    0% {left: 0%;}
+    50%{left:20%; }
+    100% {left: 100%;}
+}
+
+@keyframes Airflowrotate {
+    0% {
+    transform: rotate(0deg) ;
+  }
+  50% {
+    transform: rotate(45deg) ;
+  }
+    100% {
+    transform: rotate(360deg) ;
+  }
+}
+
+        .box{
+            height: 120px;
+            width: 149px;
+        /*  border:red 1px solid; */
+            background: url("car.png") left center; /* positioned image inside div */
+            animation: play 0.8s steps(6) infinite;   /* animation name, time, number of frames, inf playback */
+         /*   animation-play-state: paused; */
+        }
+        @keyframes play{                               /* animation name ref to style */
+
+            100% {background-position: -900px;}       /* starts at 0 and moves to -1900 (think a mouse) */
+        }
+</style>
+</head>
+<body>
+        <div class="box"></div>
+<div id="benzMotorwagen">
+    <img src="car1.svg" id="car">
+    <div id="backcontainer">
+        <img src="backwheel.svg" id="back">
+    </div>
+    <div id="frontcontainer">
+        <img src="frontwheel.svg" id="front">
+    </div>
+</div>
+<div>
+    <h3>Benz Motorwagen</h3>
+</div>
+<div id="modelT">
+    <img src="modelt.svg" >
+    <div id="modelT_back">
+        <img src="modelt_back.svg" >
+    </div>
+    <div id="modelT_front">
+        <img src="modelt_front.svg" >
+    </div>
+</div>
+<div>
+    <h3>Ford Model T</h3>
+</div>
+
+<div id="airFlow">
+    <img src="streamline.svg" >
+
+    <div id="airFlow_BackTire">
+        <img src="streamtire.svg" >
+    </div>
+    <div id="airFlow_FrontTire">
+        <img src="streamtire.svg" >
+    </div>
+    <div id="airFlow_wing">
+        <img src="streamwing.svg" >
+    </div>
+</div>
+<div>
+    <h3>Chrysler Airflow</h3>
+</div>
+
+</body>
+</html>
